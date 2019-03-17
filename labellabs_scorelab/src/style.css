@@ -1,0 +1,18 @@
+.responsive {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 20px;
+}
+.img {
+    border-radius: 10ch;
+}
+
+.upload {
+    border-radius: 10ch;
+    margin-bottom: 25px;
+}
+
+
+
+
