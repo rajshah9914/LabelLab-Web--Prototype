@@ -88,7 +88,7 @@ class AlertDialog extends React.Component {
           aria-describedby="alert-dialog-description"
         >
         <DialogTitle id="alert-dialog-title">
-            {"Use Google's location service?"}
+            {"ROI Selection By Dragging.."}
         </DialogTitle>
         <DialogContent>
             <DialogContentText id="alert-dialog-description">

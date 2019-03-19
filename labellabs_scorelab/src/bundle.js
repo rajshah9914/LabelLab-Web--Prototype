@@ -3,6 +3,8 @@ import axios from 'axios';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { render } from 'react-dom';
 import AlertDialog from "./pop-up";
+import SearchAppBar from "./header"
+import IconLabelButtons from "./upload-button"
 
 class Main extends Component {
 	constructor(props) {
@@ -36,40 +38,43 @@ class Main extends Component {
 	render(){
 			return (
 				<div className="main">
-						<h1>Galleria</h1>
-						<div className="gallery">
-						<div className="upload">
-						<button onClick={this.uploadWidget.bind(this)} className="upload-button">
-							Click to Upload
-						</button>
-						</div>
-							<CloudinaryContext cloudName="dkwm7h5vw">
-								{
-									this.state.gallery.map(data => {
-											return (
-												<div className="responsive" key={data.public_id}>
-													<div className="img">
-															<Image publicId={data.public_id} >
-																	<Transformation
-																			crop="scale"
-																			width="300"
-																			height="200"
-																			dpr="auto"
-																			responsive_placeholder="blank"
-																	/>      
-															</Image>
-															<AlertDialog 
-															value={`https://res.cloudinary.com/dkwm7h5vw/image/upload/${data.public_id}.jpg`}
-															/>
-													</div>
-												</div>
-											)
-									})
-									}
-							</CloudinaryContext>
-							<div className="clearfix"></div>
-						</div>
-				</div>
+				<SearchAppBar
+				/>
+				<h1 className="title">Animal Gallery View</h1>
+					<div className="gallery">
+						<div class="upload" onClick={this.uploadWidget.bind(this)}>
+    					<IconLabelButtons iconClassName="upload-button" />
+  					</div>
+					</div>
+					<CloudinaryContext cloudName="dkwm7h5vw">
+						{
+							this.state.gallery.map(data => {
+									return (
+										<div className="responsive" key={data.public_id}>
+											<div className="img">
+													<Image publicId={data.public_id} >
+															<Transformation
+																	crop="fill"
+																	width="300"
+																	height="200"
+																	dpr="auto"
+																	radius="50"
+																	responsive_placeholder="blank"
+															/>      
+													</Image>
+													<AlertDialog 
+													value={`https://res.cloudinary.com/dkwm7h5vw/image/upload/${data.public_id}.jpg`}
+													/>
+											</div>
+										</div>
+									)
+							})
+							}
+					</CloudinaryContext>
+					<div className="footer">
+						<p className='copyright'>© Copyright 2019 Sustainable Computing Research Group (SCoRe)</p>
+					</div>
+					</div>
         );
     }
 }
