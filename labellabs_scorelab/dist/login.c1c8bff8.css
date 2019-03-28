@@ -1,0 +1,30 @@
+.form-login{
+    margin-left : 37%; 
+    margin-right : 10%;
+}
+
+.container {
+    margin-top : 40px;
+    border-radius : 5px;
+    background-color : #f2f2f2;
+    padding : 20px;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px 18px ;
+}
+
+.submit {
+    border-radius : 50px;
+}
+
+.login-display {
+    margin-top: 50px;
+    font-family: "Times New Roman", Times, serif;
+    margin-left : 36%; 
+}
+
+.signup {
+    margin-left : 3%; 
+}
+
+/*# sourceMappingURL=/login.c1c8bff8.css.map */

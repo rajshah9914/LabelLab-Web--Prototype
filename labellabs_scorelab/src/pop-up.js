@@ -61,7 +61,7 @@ class AlertDialog extends React.Component {
 					<select onChange={(event) => this.changeRegionData(regionProps.index, event)} value={regionProps.data.dataType}>
 						<option value='1'>Elephant</option>
 						<option value='2'>Cat</option>
-						<option value='3'>Red</option>
+						<option value='3'>Other Animal</option>
 					</select>
 				</div>
 			);
@@ -77,7 +77,7 @@ class AlertDialog extends React.Component {
 
     render() {
      return (
-      <div>
+      <div className="roi-select">
         <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
             Click here for ROI selection.
         </Button>
@@ -88,7 +88,7 @@ class AlertDialog extends React.Component {
           aria-describedby="alert-dialog-description"
         >
         <DialogTitle id="alert-dialog-title">
-            {"Use Google's location service?"}
+            {"ROI Selection By Dragging.."}
         </DialogTitle>
         <DialogContent>
             <DialogContentText id="alert-dialog-description">
@@ -102,12 +102,11 @@ class AlertDialog extends React.Component {
             </DialogContentText>
         </DialogContent>
         <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
-                Disagree
-            </Button>
+            <form method="POST" action='/'>
             <Button onClick={this.handleClose} color="primary" autoFocus>
                 Agree
             </Button>
+            </form>
         </DialogActions>
         </Dialog>
       </div>
