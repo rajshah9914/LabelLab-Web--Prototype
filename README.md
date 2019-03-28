@@ -68,3 +68,6 @@ Nodemon provides dynamic and automatic changes and deployment.
 ```
 $npm install nodemon --save
 ```
+
+## For more details:
+### Checkout out [here](https://docs.google.com/document/d/1UD3tX7ff1GrOAlxj99TdDPPpKqz68t7Btc3Tt19sync/edit?usp=sharing)
