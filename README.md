@@ -45,7 +45,7 @@ npm install
 ```
 npm run dev
 ```
-The react web-app will run at localhost:1234 and will be built.
+The react web-app will now run at http://localhost:1234 and will be built.
 
 
   * Step 5: To run server:
@@ -61,7 +61,7 @@ or
 nodemon server.js
 ```
 
-Server will now run at localhost:5000
+Server will now run at http://localhost:5000
 
 Nodemon provides dynamic and automatic changes and deployment.
 
